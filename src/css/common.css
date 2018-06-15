@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #eeeeee;
+}
+
+.fadeout {
+    position: relative;
+}
+
+.photo-container {
+    position: absolute;
+    background-size: cover;
+    height: 600px;
+    width: 1200px;
+    top: 30px;
+    left: 60px
+}
+
+.photo-child-img {
+    display: block;
+    list-style-type: none;
+    margin: auto;
+}
+
+.photo-child-button {
+    position: relative;
+    opacity: 0;
+    z-index: 5;
+}
+
+#button-ahead {
+    left: 650px;
+    top: 450px;
+}
+
+#button-back {
+    left: 630px;
+    top: 600px;
+}
+
+#button-right {
+    left: 1000px;
+    top: 500px;
+}
+
+#button-left {
+    left: 100px;
+    top: 500px;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:#fff;  /* 背景カラー */
+  z-index: 1;  /* 一番手前に */
+  pointer-events: none;  /* 他の要素にアクセス可能にするためにポインターイベントは無効に */
+  opacity: 0;  /* 初期値 : 透過状態 */
+  -webkit-transition: opacity .8s ease;  /* アニメーション時間は 0.8秒 */
+  transition: opacity .8s ease;
+}
+
+body.fadeout::after {
+  opacity: 1;
+}
+
+.loupe {
+    position: absolute;
+}
+
+.loupe-img {
+    width: 50px;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.loupe-detail-container {
+    opacity: 0;
+    float: left;
+    width: 450px;
+    height: 300px;
+    border: 1px solid #333333;
+    border-radius: 5px;
+}
+
+.loupe-detail-left {
+    float: left;
+    width: 150px;
+    height: 300px;
+    background-color: #dddddd;
+}
+
+.loupe-detail-left-title {
+    width: 100px;
+    height: 100px;
+    margin: 25px;
+}
+
+.loupe-detail-left-pic {
+    width: 100px;
+    height: 100px;
+    margin: 25px;
+}
+
+.loupe-detail-right {
+    float: left;
+    width: 300px;
+    height: 300px;
+}
+
+.loupe-detail-right-content {
+    width: 290px;
+    height: 40px;
+    padding: 5px;
+    background-color: #dddddd;
+    text-align: center;
+    font-size: 20px;
+}
+
+.loupe-detail-right-snsarea {
+    width: 290px;
+    height: 240px;
+    padding: 5px;
+    background-color: #dddddd;
+}
+
+#photo-main {
+    background-image: url(../img/main.JPG);
+}
+
+#photo-room-2-2 {
+    background-image: url(../img/room-2-2.JPG);
+}
+
+#photo-room-1 {
+    background-image: url(../img/room-1.jpg);
+}
+
+#loupe-hirata-1 {
+    top: 200px;
+    left: 550px;
+}
+
+#loupe-hirata-2 {
+    top: 410px;
+    left: 250px;
+}
+
+#loupe-hirata-3 {
+    top: 470px;
+    left: 270px;
+}
+
+.arrow-img {
+    width: 100px;
+}
